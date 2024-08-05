@@ -1,0 +1,414 @@
+{% extends "base.html" %} {% block content %}
+
+<section id="print-section"
+  class="flex justify-center w-full" dark:bg-gray-700 text-gray-900 dark:text-white"
+>
+  <article
+    class="w-full  text-gray-900 dark:text-white"
+  >
+    <header class="mb-4 lg:mb-6">
+      <address class="flex w-full flex-row justify-between mb-6 not-italic">
+        <div
+          class="inline-flex w-full items-center  justify-between mr-3 text-sm text-gray-900 dark:text-white"
+        >
+         
+          <div class="flex flex-row">
+            <img
+            class="mr-4 w-40 h-40 rounded-full"
+            src="{{url_for('static', filename='imgs/gazi2.png')}}"
+            alt="Gazi "
+            />
+            <div>
+              <a
+              rel="author"
+              class="text-xl font-bold text-gray-900 dark:text-white"
+              >Gazi Üniversitesi</a
+            >
+            <p class="text-base text-gray-500 dark:text-gray-400">
+              Adres: Emniyet Mahallesi 06500, Yenimahalle / ANKARA
+            </p>
+            <p class="text-base text-gray-500 dark:text-gray-400">
+              Telefon: 0(312) 202 20 00            
+            </p>
+            <p class="text-base text-gray-500 dark:text-gray-400">
+              Faks: 0(312) 221 32 02            
+            </p> 
+            <p class="text-base text-gray-500 dark:text-gray-400">
+              Email: fenbil@gazi.edu.tr            
+            </p> 
+            <p class="text-base text-gray-500 dark:text-gray-400">
+              Web Site: www.gazi.edu.tr          
+            </p>
+            </div>
+            
+          </div>
+          <img
+            class="h-40 rounded-full"
+            src="{{url_for('static', filename='imgs/logo_100.png')}}"
+            alt="Gazi "
+            />
+    
+        </div>
+      </address>
+      <h1
+        class="mb-4 text-3xl text-justify font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white"
+      >
+      SAVİKA RAPOR
+      </h1>
+    </header>
+    <p class="text-justify mb-4" >
+      Geçtiğimiz yüzyılda kullanılan sistematik tasarım yöntemlerine ek olarak, modern teknolojik gelişmelere uyarlanmış, güncel temsil ve karar verme yapılarını içeren daha yeni sistematik tasarım teknikleri de bulunmaktadır.
+    </p>
+
+    <h2 class=" mb-4 text-xl lg:text-2xl"><strong>Şartname Seçimleri</strong> </h2>
+
+    <table
+    class="w-full my-4 items-center text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+  >
+    <thead
+      class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+    >
+      <tr>
+        <th scope="col" class="px-6 py-3">#</th>
+        <th scope="col" class="px-6 py-3">Sorular</th>
+        <th scope="col" class="px-6 py-3">Yanıtlar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+        <th
+          scope="row"
+          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          1
+        </th>
+        <td class="px-6 py-4">İnsansız kara aracının maliyeti ne kadar olsun?</td>
+        <td class="px-6 py-4">{{secimler[0]}}</td>
+      </tr>
+      
+      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+        <th
+          scope="row"
+          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          2
+        </th>
+        <td class="px-6 py-4">
+          İnsansız kara aracının boyutsal sınıflandırması hangi aralıkta bulunsun?
+        </td>
+        <td class="px-6 py-4">{{secimler[1]}}</td>
+      </tr>
+      <tr class="bg-white dark:bg-gray-800">
+        <th
+          scope="row"
+          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          3
+        </th>
+        <td class="px-6 py-4">
+          İnsansız kara aracının özerklik durumu hangi seviyede olsun?
+        </td>
+        <td class="px-6 py-4">{{secimler[2]}}</td>
+      </tr>
+      <tr class="bg-white dark:bg-gray-800">
+        <th
+          scope="row"
+          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          4
+        </th>
+        <td class="px-6 py-4">
+          İnsansız kara aracının kapsama alanı ne kadar olsun?
+        </td>
+        <td class="px-6 py-4">{{secimler[3]}}</td>
+      </tr>
+      <tr class="bg-white dark:bg-gray-800">
+        <th
+          scope="row"
+          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          5
+        </th>
+        <td class="px-6 py-4">
+          İnsansız kara aracının hangi görevde kullanılsın?
+        </td>
+        <td class="px-6 py-4">{{secimler[4]}}</td>
+      </tr>
+      <tr class="bg-white dark:bg-gray-800">
+        <th
+          scope="row"
+          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          6
+        </th>
+        <td class="px-6 py-4">
+          İnsansız kara aracında kullanılacak motor tipi ne olsun?
+        </td>
+        <td class="px-6 py-4">{{secimler[5]}}</td>
+      </tr>
+      <tr class="bg-white dark:bg-gray-800">
+        <th
+          scope="row"
+          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          7
+        </th>
+        <td class="px-6 py-4">
+          İnsansız kara aracının kullanılacağı arazi tipi hangisidir?
+        </td>
+        <td class="px-6 py-4">{{secimler[6]}}</td>
+      </tr>
+      <tr class="bg-white dark:bg-gray-800">
+        <th
+          scope="row"
+          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          8
+        </th>
+        <td class="px-6 py-4">
+          İnsansız kara aracının manevra kabiliyeti nasıl olsun?
+        </td>
+        <td class="px-6 py-4">{{secimler[7]}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+    <p class="text-justify mb-4">
+      Eğer savunma sistemleri için fonksiyonlar açısından tasarım yapısını ifade edebilen, tasarım veri tabanı kullanımına izin veren, alternatif çözüm önerilerini değerlendirmek için yapay zeka tekniklerini kullanabilen ve önerilen tasarım alternatifleri için nesne yönelimli geri bildirim ve düzenleme sağlayan sistemli bir tasarım tekniği olsaydı, yapılacak işler büyük ölçüde kolaylaştırılabilirdi.
+    </p>
+    <p class="text-justify mb-4">
+      Yenilikçi tasarım işlem modelinin bazı önemli aşamalarında mevcuttaki sistematik tasarım tekniklerinin üstün yönlerinden yararlanılmaktadır. Bu amaçla, istenilen tasarım özelliklerini içeren mevcuttaki sistematik tasarım teknikleri, yapay zeka teknikleri kullanılarak savunma sistemine uygun seçimlerin yapılabilmesi için bir tasarım işlem modelinin süreç sıralaması içerisinde yeniden düzenlenmiştir. Kullanılan sistematik tasarım tekniklerinin üstün özelliklerinin yapıyı bozmamasına özen gösterilmiştir.
+    </p>
+    <p class="text-justify mb-4">
+      Bu tasarım modelinin genel yapısında ilk aşama, problemin tanımlanması, şartname bilgilerinin detaylandırılması, ihtiyaç ve kısıtların belirlenmesinden oluşur. İkinci aşama ise alternatif öneriler arasından yapay zekaya uyumlu bir şekilde değerlendirilerek çözüm seçilmesidir. Bu tasarım modelinin üçüncü ve son önemli aşaması, geri bildirim ve kullanıcı onayına yönelik olarak hazırlanır.
+    </p>
+    <h2 class=" mb-4 text-xl lg:text-2xl"><strong>SAVİKA Sonuçları</strong> </h2>
+
+      <table
+    class="w-full my-4 items-center text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+  >
+    <thead
+      class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+    >
+      <tr>
+        <th scope="col" class="px-6 py-3">#</th>
+        <th scope="col" class="px-6 py-3">Tasarım Katalogu</th>
+        <th scope="col" class="px-6 py-3">Parametreler</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+        <th
+          scope="row"
+          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          1
+        </th>
+        <td class="px-6 py-4">Sınıf</td>
+        <td class="px-6 py-4">{{result[0]}}</td>
+      </tr>
+      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+        <th
+          scope="row"
+          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          2
+        </th>
+        <td class="px-6 py-4">Özerk Yapı</td>
+        <td class="px-6 py-4">{{result[1]}}</td>
+      </tr>
+      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+        <th
+          scope="row"
+          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          3
+        </th>
+        <td class="px-6 py-4">Kontrol Sistemi</td>
+        <td class="px-6 py-4">{{result[2]}}</td>
+      </tr>
+      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+        <th
+          scope="row"
+          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          4
+        </th>
+        <td class="px-6 py-4">Faydalı Yük</td>
+        <td class="px-6 py-4">{{result[3]}}</td>
+      </tr>
+      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+        <th
+          scope="row"
+          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          5
+        </th>
+        <td class="px-6 py-4">Motor</td>
+        <td class="px-6 py-4">{{result[4]}}</td>
+      </tr>
+      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+        <th
+          scope="row"
+          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          6
+        </th>
+        <td class="px-6 py-4">Yönlendirme Sistemi</td>
+        <td class="px-6 py-4">{{result[5]}}</td>
+      </tr>
+      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+        <th
+          scope="row"
+          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          7
+        </th>
+        <td class="px-6 py-4">Süspansiyon Sistemi</td>
+        <td class="px-6 py-4">{{result[6]}}</td>
+      </tr>
+      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+        <th
+          scope="row"
+          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          8
+        </th>
+        <td class="px-6 py-4">Gövde Malzemesi</td>
+        <td class="px-6 py-4">{{result[7]}}</td>
+      </tr>
+      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+        <th
+          scope="row"
+          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          9
+        </th>
+        <td class="px-6 py-4">Enerji Sistemi</td>
+        <td class="px-6 py-4">{{result[8]}}</td>
+      </tr>
+      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+        <th
+          scope="row"
+          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          10
+        </th>
+        <td class="px-6 py-4">Güç Aktarma Sistemi</td>
+        <td class="px-6 py-4">{{result[9]}}</td>
+      </tr>
+      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+        <th
+          scope="row"
+          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          11
+        </th>
+        <td class="px-6 py-4">Fren Sistemi</td>
+        <td class="px-6 py-4">{{result[10]}}</td>
+      </tr>
+      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+        <th
+          scope="row"
+          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          12
+        </th>
+        <td class="px-6 py-4">Isı Yönetim Sistemi</td>
+        <td class="px-6 py-4">{{result[11]}}</td>
+      </tr>
+      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+        <th
+          scope="row"
+          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          13
+        </th>
+        <td class="px-6 py-4">Elektrik Sistemi</td>
+        <td class="px-6 py-4">{{result[12]}}</td>
+      </tr>
+      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+        <th
+          scope="row"
+          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          14
+        </th>
+        <td class="px-6 py-4">Elektronik Üniteler</td>
+        <td class="px-6 py-4">{{result[13]}}</td>
+      </tr>
+      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+        <th
+          scope="row"
+          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          15
+        </th>
+        <td class="px-6 py-4">İntikal Konfigürasyonu</td>
+        <td class="px-6 py-4">{{result[14]}}</td>
+      </tr>
+      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+        <th
+          scope="row"
+          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          16
+        </th>
+        <td class="px-6 py-4">Şasi</td>
+        <td class="px-6 py-4">{{result[15]}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+      <figure class="flex flex-col w-full my-4 items-center">
+      <img
+        class="w-[75%]"
+        src="{{url_for('static',filename=result[-1])}}"
+        alt=""
+      />
+      <figcaption><strong>Şekil 1.</strong> Geliştirilen tasarım işlem modelinin genel yapısı</figcaption>
+    </figure>
+    <p class="text-justify mb-4" >
+      Şekil 3.1'de gösterilen inovatif tasarım modeli işlem aşamaları sırasıyla şu şekilde özetlenebilir: 
+    </p>
+    <p class="text-justify mb-4">
+      <strong>Şartname:</strong> İnsansız kara aracı tasarımının başlangıç aşamasıdır. Tasarımcı ve kullanıcı istekleri, ihtiyaçlar ve sınırlamalar belirlenir. Şartname aşamasında, sistematik tasarımının modelinin çözüm aramada kullanabileceği her türlü veri temin edilmelidir. Kullanıcı isteklerini kapsayan verilerin, müşteri ya da tasarımcıdan istenmesi esnasında, özel olarak düzenlenmiş şartname formları üzerindeki onay kutularının işaretlemesi yeterli olabilir. Sistematik tasarımda şartname ihtiyaçlarının eksiksiz bir şekilde belirtilmesi ile sorunun tarif edilmesi mümkündür. Dolayısıyla şartname hazırlama evresi sistematik tasarımın en önemli bölümlerinden birisidir.
+    </p>
+    <p class="text-justify mb-4">
+      <strong>Tüm fonksiyon yapısının belirlenmesi:</strong> Belirlenen şartname isteklerinin amaçlarını anlatan, sisteme giren ve çıkan verileri göstermek için hazırlanmış, genel bir fonksiyon yapısı gösterimidir. Tasarımı gerçekleştirilecek olan insansız kara aracının sistem girdileri ve çıktıları, belirlenen bir fonksiyon üzerine işaretlenir. 
+    </p>
+    <p class="text-justify mb-4">
+      <strong>Alt fonksiyon yapılarına ayrıştırma:</strong> Tüm fonksiyon yapılarının açık bir şekilde anlatılması, sistemlerin birbirleriyle olan ilişkilerinin belirlenmesi, veri tabanından ya da katalogdan fiziksel ilişkilerin sağlanması gibi işlemler alt fonksiyon yapılarına parçalanarak tanımlanır.
+    </p>
+    <p class="text-justify mb-4">
+      <strong>Karar verme:</strong> Oluşturulan tasarım alternatifleri içerisinden, tasarım ihtiyaçlarını, saptanan önem derecelerine göre değerlendirerek, en uygun olan çözüm tipinin seçim işlemi karar verme aşamasının vazifesidir. Karar verme aşaması için, kurallara dayalı bir veri tabanı oluşturulması önerilmektedir.
+    </p>
+    <p class="text-justify mb-4">
+      <strong>Tasarım alternatiflerinin üretilmesi:</strong> Aynı tür tasarım isteklerini karşılayan, farklı fiziksel yapılarda farklı çözümler üretilebilir. Alternatif çözümleri ortaya çıkarmaya yönelik çalışmalar, sistematik tasarım yöntemlerinin geliştirilmesindeki önemli nedenlerin başında gelir.
+    </p>
+    <p class="text-justify mb-4">
+      <strong>Kavramsal tasarım sonu:</strong> Sistematik tasarım modeli işlem sırası takip edilerek, insansız kara aracının kavramsal tasarımı sonlandırılır. Kullanılan tasarım modelinde aranılan yapıların kavramsal olarak modellenmesi yeterli olmaktadır. Oluşturulan kavramsal tasarımın ayrıntılı bir tasarıma dönüştürülmesi, bazı mühendislik hesapları ile sağlanabilir.
+    </p>
+    </article>
+</section>
+<script>
+  document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && event.key === 'p') {
+        console.log('Ctrl+P tuş kombinasyonu algılandı!');
+        event.preventDefault(); // Tarayıcının varsayılan işlevini engeller
+        generatePDF()
+    }
+});
+
+  function generatePDF() {
+    var printContent = document.getElementById("print-section").innerHTML;
+    var originalContent = document.body.innerHTML;
+
+    document.body.innerHTML = printContent;
+    window.print();
+    document.body.innerHTML = originalContent;
+    location.reload();
+  }
+</script>
+{% endblock %}

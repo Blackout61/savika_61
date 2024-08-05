@@ -1,0 +1,64 @@
+{% extends "base.html" %} {% block content %}
+<section>
+  <h2
+  class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white"
+>
+ SAVİKA KULLANIM KILAVUZU
+</h2>
+  <div class="slideshow-container w-full relative">
+    <div class="w-full max-w-7xl mx-100 ">
+      <div class="relative w-full overflow-hidden border-2 rounded-lg shadow-lg">
+          <div class="slider flex transition-transform duration-500">
+              <img src="{{url_for('static', filename='imgs/Slider/1.png')}}" class="w-full" alt="Slide 1">
+              <img src="{{url_for('static', filename='imgs/Slider/2.png')}}" class="w-full" alt="Slide 2">
+              <img src="{{url_for('static', filename='imgs/Slider/2.png')}}" class="w-full" alt="Slide 3">
+              <img src="{{url_for('static', filename='imgs/Slider/4.png')}}" class="w-full" alt="Slide 4">
+              <img src="{{url_for('static', filename='imgs/Slider/5.png')}}" class="w-full" alt="Slide 5">
+              <img src="{{url_for('static', filename='imgs/Slider/6.png')}}" class="w-full" alt="Slide 6">
+              <img src="{{url_for('static', filename='imgs/Slider/7.png')}}" class="w-full" alt="Slide 7">
+              <img src="{{url_for('static', filename='imgs/Slider/8.png')}}" class="w-full" alt="Slide 8">
+              <img src="{{url_for('static', filename='imgs/Slider/9.png')}}" class="w-full" alt="Slide 9">
+              <img src="{{url_for('static', filename='imgs/Slider/10.png')}}" class="w-full" alt="Slide 10">
+              <img src="{{url_for('static', filename='imgs/Slider/11.png')}}" class="w-full" alt="Slide 11">
+              <img src="{{url_for('static', filename='imgs/Slider/12.png')}}" class="w-full" alt="Slide 12">
+              <img src="{{url_for('static', filename='imgs/Slider/13.png')}}" class="w-full" alt="Slide 13">
+              <img src="{{url_for('static', filename='imgs/Slider/14.png')}}" class="w-full" alt="Slide 14">
+              <img src="{{url_for('static', filename='imgs/Slider/15.png')}}" class="w-full" alt="Slide 15">
+              <img src="{{url_for('static', filename='imgs/Slider/16.png')}}" class="w-full" alt="Slide 16">
+              <img src="{{url_for('static', filename='imgs/Slider/17.png')}}" class="w-full" alt="Slide 17">
+              <img src="{{url_for('static', filename='imgs/Slider/18.png')}}" class="w-full" alt="Slide 18">
+              <img src="{{url_for('static', filename='imgs/Slider/19.png')}}" class="w-full" alt="Slide 19">
+              <img src="{{url_for('static', filename='imgs/Slider/20.png')}}" class="w-full" alt="Slide 20">
+              <img src="{{url_for('static', filename='imgs/Slider/21.png')}}" class="w-full" alt="Slide 21">
+              <img src="{{url_for('static', filename='imgs/Slider/22.png')}}" class="w-full" alt="Slide 22">
+              <img src="{{url_for('static', filename='imgs/Slider/23.png')}}" class="w-full" alt="Slide 23">
+          </div>
+          <button class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-2" id="prevBtn">&#10094;</button>
+          <button class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-2" id="nextBtn">&#10095;</button>
+      </div>
+  </div>
+</section>
+<script>
+  const slider = document.querySelector('.slider');
+  const slides = document.querySelectorAll('.slider img');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  let currentIndex = 0;
+
+  function showSlide(index) {
+      const slideWidth = slides[0].clientWidth;
+      slider.style.transform = `translateX(${-index * slideWidth}px)`;
+  }
+
+  nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+  });
+
+  prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(currentIndex);
+  });
+</script>
+{% endblock %}
